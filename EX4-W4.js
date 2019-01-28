@@ -1,13 +1,21 @@
 function cariModus(arr) {
   var modus = []
   var same = 0
+  // console.log(arr.length)
   for (var i = 0; i < arr.length; i++) {
     for (var j = i+1; j < arr.length; j++) {
+      // console.log(arr[i] + '===')
       if (arr[i] === arr[j]){
         modus.push(arr[i])
-      }
+        // console.log(arr[i] +'===>' + arr[i])
+      } 
     }
   }
+  // console.log(modus + '<===')
+  // console.log(arr[i] + '<===')
+  if (modus[0] === undefined || modus.length === arr.length * 2 ) {
+    return -1
+  } 
   return modus[0]
 }
 
