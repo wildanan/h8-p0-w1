@@ -13,7 +13,10 @@ function highestScore (students) {
         school[clas].score = 0
       }
       school[clas].name = name
-      school[clas].score = Math.max(score)
+      if (students[i].score > school[clas].score){
+        school[clas].score = students[i].score
+      }
+      // school[clas].score = 
   }
   return school
 

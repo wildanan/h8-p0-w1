@@ -1,14 +1,17 @@
 function deepSum (arr) {
   var totalCount = 0
-
-  for (var i = 0; i < arr.length; i++) {
+  if(arr.length === 0) {
+    return 'No number'
+  }else{
+    for (var i = 0; i < arr.length; i++) {
     var arrI = arr[i]
 
-    for (var j = 0; j < arrI.length; j++) {
-      var arrJ = arrI[j]
+      for (var j = 0; j < arrI.length; j++) {
+        var arrJ = arrI[j]
 
-      for (var k = 0; k < arrJ.length; k++) {
-        totalCount += arrJ[k]
+        for (var k = 0; k < arrJ.length; k++) {
+          totalCount += arrJ[k]
+        }
       }
     }
   }
